@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Button, Menu, Typography, Avatar } from 'antd';
 import { Link } from 'react-router-dom';
-import { HomeOutlined, MoneyCollectOutlined, BulbOutlined, FundOutlined, MenuOutlined } from '@ant-design/icons';
-import '../App.css'
+import { HomeOutlined, BulbOutlined, FundOutlined, MenuOutlined } from '@ant-design/icons';
+import '../App.css';
 import icon from '../images/cryptocurrency.png';
 
 const Navbar = () => {
@@ -30,8 +30,8 @@ const Navbar = () => {
   return (
     <div className="nav-container">
       <div className="logo-container">
-        <Avatar src={icon} size="350px"/>
-        <Typography.Title level={4} className="logo" ><Link to="/">Crypto App</Link></Typography.Title>
+        <Avatar src={icon} size="350px" />
+        <Typography.Title level={4} className="logo"><Link to="/">Crypto App</Link></Typography.Title>
         <Button className="menu-control-container" onClick={() => setActiveMenu(!activeMenu)}><MenuOutlined /></Button>
       </div>
       {activeMenu && (
