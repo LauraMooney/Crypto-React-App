@@ -1,7 +1,6 @@
 {
   "name": "crypto",
   "version": "0.1.0",
-  "homepage": "https://github.com/LauraMooney/Crypto-React-App.git",
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.6.4",
