@@ -13,52 +13,46 @@ const { Title } = Typography;
 const Homepage = () => {
   const { data, isFetching } = useGetCryptosQuery(10);
   const globalStats = data?.data?.stats;
-  console.log(data, 'data');
   if (isFetching) return <Loader />;
 
   return (
-    <>
-      <h1 className="intro">Welcome to Crypto App </h1>
-      <p>
-        You can find Crypto Stats, Crypto currency market information and live
-        Crypto news. Search them all and find up to date inforamtion about the
-        Crypto Currency Market
-      </p>
-      <Title level={2} className="heading" color="gray">
+    <div className="homepage-container">
+      <h1 className="intro">Crypto News and Statistics</h1>
+      <Title level={2} className="heading">
         Global Crypto Stats
       </Title>
-      <Row gutter={[32, 32]}>
-        <Col span={12}>
-          <Statistic title="Total Cryptocurrencies" value={globalStats.total} />
+
+      {/* Responsive Statistics Row */}
+      <Row gutter={[16, 16]} justify="left">
+        <Col xs={12} sm={8} md={6} lg={4}>
+          <Statistic title="Total Cryptos" value={globalStats.total} />
         </Col>
-        <Col span={12}>
+        <Col xs={12} sm={8} md={6} lg={4}>
           <Statistic
             title="Total Exchanges"
             value={millify(globalStats.totalExchanges)}
           />
         </Col>
-        <Col span={12}>
+        <Col xs={12} sm={8} md={6} lg={4}>
           <Statistic
-            title="Total Market Cap:"
+            title="Total Market Cap"
             value={`$${millify(globalStats.totalMarketCap)}`}
           />
         </Col>
-        <Col span={12}>
+        <Col xs={12} sm={8} md={6} lg={4}>
           <Statistic
             title="Total 24h Volume"
             value={`$${millify(globalStats.total24hVolume)}`}
           />
         </Col>
-        <Col span={12}>
-          <Statistic title="Total Cryptocurrencies" value={globalStats.total} />
-        </Col>
-        <Col span={12}>
+        <Col xs={12} sm={8} md={6} lg={4}>
           <Statistic
             title="Total Markets"
             value={millify(globalStats.totalMarkets)}
           />
         </Col>
       </Row>
+
       <div className="home-heading-container">
         <Title level={2} className="home-title">
           Top 10 Cryptos In The World
@@ -68,16 +62,17 @@ const Homepage = () => {
         </Title>
       </div>
       <Cryptocurrencies simplified />
+
       <div className="home-heading-container">
         <Title level={2} className="home-title">
           Latest Crypto News
         </Title>
-        <Title level={3}>
+        <Title level={3} className="show-more">
           <Link to="/news">Show more</Link>
         </Title>
       </div>
       <News simplified />
-    </>
+    </div>
   );
 };
 
