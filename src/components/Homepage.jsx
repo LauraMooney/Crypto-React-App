@@ -17,7 +17,6 @@ const Homepage = () => {
 
   return (
     <div className="homepage-container">
-      <h1 className="intro">Crypto News and Statistics</h1>
       <Title level={2} className="heading">
         Global Crypto Stats
       </Title>
@@ -55,7 +54,7 @@ const Homepage = () => {
 
       <div className="home-heading-container">
         <Title level={2} className="home-title">
-          Top 10 Cryptos In The World
+          Top 10 Global Crypto Currencies
         </Title>
         <Title level={3} className="show-more">
           <Link to="/cryptocurrencies">Show more</Link>

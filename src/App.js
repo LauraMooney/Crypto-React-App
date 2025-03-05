@@ -19,6 +19,9 @@ const App = () => (
     <div className="main">
       <Layout>
         <div className="routes">
+          <Typography.Title level={4}>
+            <Link to="/">Crypto Today</Link>
+          </Typography.Title>
           <Switch>
             <Route exact path="/">
               <Homepage />
@@ -40,8 +43,8 @@ const App = () => (
           level={5}
           style={{ color: 'white', textAlign: 'center' }}
         >
-          Copyright © 2022
-          <Link to="/">Crypto App</Link> <br />
+          Copyright © 2025
+          <Link to="/">Crypto Today</Link> <br />
           All Rights Reserved.
         </Typography.Title>
         <Space>

@@ -4,7 +4,7 @@ import {
   HomeOutlined,
   MenuOutlined,
 } from '@ant-design/icons';
-import { Avatar, Button, Menu, Typography } from 'antd';
+import { Avatar, Button, Menu } from 'antd';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
@@ -36,10 +36,7 @@ const Navbar = () => {
     <div className="nav-container">
       <div className="logo-container">
         <Avatar src={icon} size="350px" />
-        <Typography.Title level={4} className="logo">
-          <Link to="/">Crypto Today</Link>
-        </Typography.Title>
-        <Button onClick={() => setActiveMenu(!activeMenu)}>
+        <Button className="logo" onClick={() => setActiveMenu(!activeMenu)}>
           <MenuOutlined />
         </Button>
       </div>

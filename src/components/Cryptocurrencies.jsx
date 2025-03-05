@@ -28,11 +28,6 @@ const Cryptocurrencies = ({ simplified }) => {
 
   return (
     <>
-      <h1>Cryptocurrencies</h1>
-      <p>
-        View live Crypto market stats, click or search a cryptocurrency and get
-        a live Price chart, statistics and more...
-      </p>
       {!simplified && (
         <div className="search-crypto">
           <Input
