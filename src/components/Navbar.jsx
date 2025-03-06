@@ -9,6 +9,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
 import icon from '../images/cryptocurrency.png';
+import CryptoChat from './CryptoChat';
 
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(true);
@@ -53,6 +54,7 @@ const Navbar = () => {
           </Menu.Item>
         </Menu>
       )}
+      <CryptoChat />
     </div>
   );
 };
