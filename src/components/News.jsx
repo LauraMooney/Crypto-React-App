@@ -13,7 +13,6 @@ const { Option } = Select;
 const News = ({ simplified }) => {
   const [, setNewsCategory] = useState('Cryptocurrency');
   const { data: cryptoNews, isFetching, error } = useGetCryptoNewsQuery();
-  console.log(cryptoNews, 'cryptoNews');
 
   if (isFetching) return <Loader />;
   if (error) return <div>Error loading the news</div>;
